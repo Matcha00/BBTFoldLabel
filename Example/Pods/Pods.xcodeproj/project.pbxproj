@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0A9CD18FCBE02B3BD62EF75B7F66F645 /* BBTFoldLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DDBBCEA0B1C2EC8F64AEDFCEB60CD950 /* BBTFoldLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D89F937236ADAAF00F6490F /* BBTFoldLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D89F935236ADAAE00F6490F /* BBTFoldLabel.h */; };
+		2D89F938236ADAAF00F6490F /* BBTFoldLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D89F936236ADAAF00F6490F /* BBTFoldLabel.m */; };
 		32572A0FAA2BB9330BCAE73B9C01C46C /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2543885906F43BE8DA9B6072E11A63 /* ReplaceMe.m */; };
 		384BBC1CD887EB511FFA13AA87C0107E /* Pods-BBTFoldLabel_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A37845ACD8A77464DB74E23716C2ED86 /* Pods-BBTFoldLabel_Example-dummy.m */; };
 		476CA5ED4924CEDE12A09CB9733A75A8 /* BBTFoldLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6804B531CD22CE6FDC922182A5D72A /* BBTFoldLabel-dummy.m */; };
@@ -41,34 +43,36 @@
 		206D9235BD271734A0B8FEAD388E7219 /* Pods-BBTFoldLabel_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BBTFoldLabel_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		249E538A34EC0C1A31C03182296141ED /* BBTFoldLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BBTFoldLabel.modulemap; sourceTree = "<group>"; };
 		2A46DA48AF989683F578FEDE61DAA583 /* BBTFoldLabel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BBTFoldLabel-Info.plist"; sourceTree = "<group>"; };
+		2D89F935236ADAAE00F6490F /* BBTFoldLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBTFoldLabel.h; sourceTree = "<group>"; };
+		2D89F936236ADAAF00F6490F /* BBTFoldLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBTFoldLabel.m; sourceTree = "<group>"; };
 		33A72FF10B4ED654F30EA3DD4713C76F /* Pods-BBTFoldLabel_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BBTFoldLabel_Tests-Info.plist"; sourceTree = "<group>"; };
 		406F1838CC0B389DDA8300925B9A0E6B /* Pods-BBTFoldLabel_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BBTFoldLabel_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4C2543885906F43BE8DA9B6072E11A63 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = BBTFoldLabel/Classes/ReplaceMe.m; sourceTree = "<group>"; };
-		5C4ECB83FC700AE28232C08AB7155EF6 /* Pods_BBTFoldLabel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BBTFoldLabel_Tests.framework; path = "Pods-BBTFoldLabel_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C4ECB83FC700AE28232C08AB7155EF6 /* Pods_BBTFoldLabel_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BBTFoldLabel_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		684C884142DC87861E27C68B140E5205 /* Pods-BBTFoldLabel_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BBTFoldLabel_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		692468C7092D586D754A01C359A502BD /* Pods-BBTFoldLabel_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BBTFoldLabel_Tests-dummy.m"; sourceTree = "<group>"; };
-		6A265A32CB2B16BDA9AA1F4B66F9CB51 /* Pods_BBTFoldLabel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BBTFoldLabel_Example.framework; path = "Pods-BBTFoldLabel_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A265A32CB2B16BDA9AA1F4B66F9CB51 /* Pods_BBTFoldLabel_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BBTFoldLabel_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F55B37BBE4E0241C5F7CCA8A86A6F3D /* Pods-BBTFoldLabel_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BBTFoldLabel_Tests.modulemap"; sourceTree = "<group>"; };
 		7325D387104DF7A653BDE0FCCE50AE87 /* Pods-BBTFoldLabel_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BBTFoldLabel_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		95313F85C2DEF1A70C882B39895B4E1D /* Pods-BBTFoldLabel_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BBTFoldLabel_Tests-umbrella.h"; sourceTree = "<group>"; };
 		99B8B772564B42F98F7751E82EFBF2C8 /* BBTFoldLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BBTFoldLabel-prefix.pch"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A37845ACD8A77464DB74E23716C2ED86 /* Pods-BBTFoldLabel_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BBTFoldLabel_Example-dummy.m"; sourceTree = "<group>"; };
 		A6D63F509FB6D3C4E5A595EF7BF37F57 /* Pods-BBTFoldLabel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BBTFoldLabel_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		A839735D62A63E432C6A6AE24A1F0B81 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		A839735D62A63E432C6A6AE24A1F0B81 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		B623DB8C0819A1D3EBDCC32C5F3324E0 /* Pods-BBTFoldLabel_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BBTFoldLabel_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		B9DFFC88798EF4D7E6642F195DEBC70B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		B9DFFC88798EF4D7E6642F195DEBC70B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C6189FDD24B8F3BFDAC96615A168179A /* Pods-BBTFoldLabel_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BBTFoldLabel_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CC6804B531CD22CE6FDC922182A5D72A /* BBTFoldLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BBTFoldLabel-dummy.m"; sourceTree = "<group>"; };
-		CCC74F7BD2DC23AEA0D6D832BAB79620 /* BBTFoldLabel.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = BBTFoldLabel.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CCC74F7BD2DC23AEA0D6D832BAB79620 /* BBTFoldLabel.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = BBTFoldLabel.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D1697407B86F8CD429331BA1E9857C75 /* BBTFoldLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BBTFoldLabel.xcconfig; sourceTree = "<group>"; };
 		DA8CD0F34CE0C5F96AACC900C7915F13 /* Pods-BBTFoldLabel_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BBTFoldLabel_Example.modulemap"; sourceTree = "<group>"; };
 		DD1413C73AA863EB9DF0C603E9BD1AFF /* Pods-BBTFoldLabel_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BBTFoldLabel_Example.release.xcconfig"; sourceTree = "<group>"; };
 		DDBBCEA0B1C2EC8F64AEDFCEB60CD950 /* BBTFoldLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BBTFoldLabel-umbrella.h"; sourceTree = "<group>"; };
 		EB983A3A28772D606F76B8E9FC86E23D /* Pods-BBTFoldLabel_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BBTFoldLabel_Example-Info.plist"; sourceTree = "<group>"; };
 		F31CBE27B239F54D45EFD349CC3C98F6 /* Pods-BBTFoldLabel_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BBTFoldLabel_Example-umbrella.h"; sourceTree = "<group>"; };
-		FB214656BE7B595D4D29669FF5E3159D /* BBTFoldLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BBTFoldLabel.framework; path = BBTFoldLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB214656BE7B595D4D29669FF5E3159D /* BBTFoldLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BBTFoldLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 		1121D7D88C25CE16EDAE9D334E7FC207 /* BBTFoldLabel */ = {
 			isa = PBXGroup;
 			children = (
+				2D89F935236ADAAE00F6490F /* BBTFoldLabel.h */,
+				2D89F936236ADAAF00F6490F /* BBTFoldLabel.m */,
 				4C2543885906F43BE8DA9B6072E11A63 /* ReplaceMe.m */,
 				1B61D02F3B61C5B519577D08C9B31C8C /* Pod */,
 				17B0362823CE14E83F7A1B2BD957DBDB /* Support Files */,
@@ -229,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A9CD18FCBE02B3BD62EF75B7F66F645 /* BBTFoldLabel-umbrella.h in Headers */,
+				2D89F937236ADAAF00F6490F /* BBTFoldLabel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +328,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
@@ -365,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				476CA5ED4924CEDE12A09CB9733A75A8 /* BBTFoldLabel-dummy.m in Sources */,
+				2D89F938236ADAAF00F6490F /* BBTFoldLabel.m in Sources */,
 				32572A0FAA2BB9330BCAE73B9C01C46C /* ReplaceMe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,8 +499,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
