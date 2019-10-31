@@ -29,8 +29,22 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-
-  s.source_files = 'BBTFoldLabel/Classes/**/*'
+  s.default_subspec = 'FoldLabel'
+  
+  # UI层‎⁨
+  s.subspec 'FoldLabel' do |foldLabel|
+    foldLabel.source_files = 'BBTFoldLabel/Classes/FoldLabel/*.{h,m}'
+    foldLabel.dependency 'Masonry'
+    foldLabel.dependency 'BBTFoldLabel/NSAttributedString'
+  end
+  
+  # Services层
+  s.subspec 'NSAttributedString' do |attributedString|
+    attributedString.source_files = 'BBTFoldLabel/Classes/NSAttributedString/*.{h,m}'
+    attributedString.dependency 'YYText'
+    attributedString.dependency 'YYCategories'
+  end
+  # s.source_files = 'BBTFoldLabel/Classes/**/*'
   
   # s.resource_bundles = {
   #   'BBTFoldLabel' => ['BBTFoldLabel/Assets/*.png']

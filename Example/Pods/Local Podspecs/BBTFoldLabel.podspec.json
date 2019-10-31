@@ -9,7 +9,7 @@
     "file": "LICENSE"
   },
   "authors": {
-    "Matcha00": "chenhuan@bonbonwork.com"
+    "Matcha00": "chmatcha00@gmail.com"
   },
   "source": {
     "git": "https://github.com/Matcha00/BBTFoldLabel.git",
@@ -18,5 +18,31 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "BBTFoldLabel/Classes/**/*"
+  "default_subspecs": "FoldLabel",
+  "subspecs": [
+    {
+      "name": "FoldLabel",
+      "source_files": "BBTFoldLabel/Classes/FoldLabel/*.{h,m}",
+      "dependencies": {
+        "Masonry": [
+
+        ],
+        "BBTFoldLabel/NSAttributedString": [
+
+        ]
+      }
+    },
+    {
+      "name": "NSAttributedString",
+      "source_files": "BBTFoldLabel/Classes/NSAttributedString/*.{h,m}",
+      "dependencies": {
+        "YYText": [
+
+        ],
+        "YYCategories": [
+
+        ]
+      }
+    }
+  ]
 }

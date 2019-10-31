@@ -1,15 +1,36 @@
 PODS:
-  - BBTFoldLabel (0.1.0)
+  - BBTFoldLabel (0.1.0):
+    - BBTFoldLabel/FoldLabel (= 0.1.0)
+  - BBTFoldLabel/FoldLabel (0.1.0):
+    - BBTFoldLabel/NSAttributedString
+    - Masonry
+  - BBTFoldLabel/NSAttributedString (0.1.0):
+    - YYCategories
+    - YYText
+  - Masonry (1.1.0)
+  - YYCategories (1.0.4):
+    - YYCategories/no-arc (= 1.0.4)
+  - YYCategories/no-arc (1.0.4)
+  - YYText (1.0.7)
 
 DEPENDENCIES:
   - BBTFoldLabel (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Masonry
+    - YYCategories
+    - YYText
 
 EXTERNAL SOURCES:
   BBTFoldLabel:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BBTFoldLabel: 4277b5e938e28379a3f7f9fb74b8d8650449d664
+  BBTFoldLabel: 91084df9a7fcf249ddc4c99eec00be2ff55fd207
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
 PODFILE CHECKSUM: 0e84e3d4d907cd84643440c52bca0a70a00e8b88
 
