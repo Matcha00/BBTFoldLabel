@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'BBTFoldLabel'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of BBTFoldLabel.'
+  s.summary          = '一个好用的折叠展开Label，OC版'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-                        A description of BBTFoldLabel.
+                        一个好用的折叠展开Label，OC版，支持限制行数，展示展开折叠按钮，欢迎使用
                        DESC
 
   s.homepage         = 'https://github.com/Matcha00/BBTFoldLabel'
