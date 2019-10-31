@@ -1,0 +1,22 @@
+{
+  "name": "BBTFoldLabel",
+  "version": "0.1.0",
+  "summary": "A short description of BBTFoldLabel.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Matcha00/BBTFoldLabel",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Matcha00": "chenhuan@bonbonwork.com"
+  },
+  "source": {
+    "git": "https://github.com/Matcha00/BBTFoldLabel.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "BBTFoldLabel/Classes/**/*"
+}

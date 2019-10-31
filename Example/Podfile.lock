@@ -1,0 +1,16 @@
+PODS:
+  - BBTFoldLabel (0.1.0)
+
+DEPENDENCIES:
+  - BBTFoldLabel (from `../`)
+
+EXTERNAL SOURCES:
+  BBTFoldLabel:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BBTFoldLabel: 4277b5e938e28379a3f7f9fb74b8d8650449d664
+
+PODFILE CHECKSUM: 0e84e3d4d907cd84643440c52bca0a70a00e8b88
+
+COCOAPODS: 1.7.0.beta.3

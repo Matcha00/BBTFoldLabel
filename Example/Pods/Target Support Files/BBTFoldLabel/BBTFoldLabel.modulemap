@@ -1,0 +1,6 @@
+framework module BBTFoldLabel {
+  umbrella header "BBTFoldLabel-umbrella.h"
+
+  export *
+  module * { export * }
+}
