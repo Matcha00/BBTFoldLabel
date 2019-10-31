@@ -22,7 +22,7 @@ pod 'BBTFoldLabel'
 
 ## Author
 
-Matcha00, chenhuan@bonbonwork.com
+Matcha00, chmatcha00@gmail.com
 
 ## License
 
