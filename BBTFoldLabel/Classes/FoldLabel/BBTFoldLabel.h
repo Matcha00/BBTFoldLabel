@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL unfold;
 @property (nonatomic, assign) NSInteger foldLineNum;
 @property (nonatomic, copy) NSString *contentString;
+@property (nonatomic, assign) CGFloat contentWidth;
 @property (nonatomic) UIEdgeInsets *contenetLabelEdgeInsets;
 + (CGFloat)getFoldLabelHeightAttributedString:(NSAttributedString *)attributedString foldLineNum:(NSInteger)foldLineNum contentWidth:(CGFloat)width;
 @end

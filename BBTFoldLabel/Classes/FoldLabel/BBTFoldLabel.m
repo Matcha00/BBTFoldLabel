@@ -6,8 +6,11 @@
 //
 
 #import "BBTFoldLabel.h"
-#import <YYText.h>
-#import "NSAttributedString+BBTFoldLabel.h"
+#import <BBTFoldLabel/NSAttributedString+BBTFoldLabel.h>
+#import <YYCategories/YYCategories.h>
+#import <Masonry/Masonry.h>
+#import <YYText/YYText.h>
+
 @implementation BBTFoldLabel
 
 #pragma mark - Init Methods
@@ -27,8 +30,8 @@
 - (UILabel *)contentLabel {
     if (!_contentLabel) {
         _contentLabel = [[UILabel alloc]init];
-        _contentLabel.font = BBTFont_Regular(15);
-        _contentLabel.textColor = WKC_HEXRGBCOLOR(0x444444);
+        _contentLabel.font = [UIFont systemFontOfSize:15];
+        _contentLabel.textColor = [UIColor colorWithHexString:@"#444444"];
         _contentLabel.textAlignment = NSTextAlignmentLeft;
         [self addSubview:_contentLabel];
         [_contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -41,8 +44,8 @@
     if (!_foldButton) {
         _foldButton = [[UIButton alloc]init];
         [_foldButton addTarget:self action:@selector(foldButtonClickButton:) forControlEvents:UIControlEventTouchUpInside];
-        [_foldButton setTitleColor:WKC_HEXRGBCOLOR(0x805040) forState:UIControlStateNormal];
-        _foldButton.titleLabel.font = BBTFont_Regular(15);
+        [_foldButton setTitleColor:[UIColor colorWithHexString:@"#805040"] forState:UIControlStateNormal];
+        _foldButton.titleLabel.font = [UIFont systemFontOfSize:15];
         [_foldButton sizeToFit];
         [self addSubview:_foldButton];
     }
@@ -107,7 +110,7 @@
     CGSize size = CGSizeMake(self.contentWidth, MAXFLOAT);
     NSInteger numberOfLines = 0;
     if ([self.contentString isKindOfClass:[NSAttributedString class]]) {
-        self.contentLabel.attributedText = [self.contentString attributedSubstringWithBoundingSize:size maxNumberOfLines:foldLineNum numberOfLines:&numberOfLines];
+        self.contentLabel.attributedText = [(NSAttributedString *)self.contentString attributedSubstringWithBoundingSize:size maxNumberOfLines:foldLineNum numberOfLines:&numberOfLines];
     }else {
         self.contentLabel.attributedText = [[self contentAttributedString:self.contentString] attributedSubstringWithBoundingSize:size maxNumberOfLines:foldLineNum numberOfLines:&numberOfLines];
     }
@@ -123,6 +126,8 @@
     NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString:originStr];
     attributedText.yy_font = self.contentLabel.font;
     attributedText.yy_color = self.contentLabel.textColor;
+    NSInteger numberOfLines = 0;
+    NSLog(@"%@", NSStringFromCGRect([attributedText attributedSubstringBoundingRectWithSize:CGSizeMake(200, MAXFLOAT) maxNumberOfLines:4 numberOfLines:numberOfLines]));
     return attributedText;
 }
 #pragma mark - Notifications
