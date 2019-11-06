@@ -54,9 +54,7 @@
 #pragma mark - Layout Subviews
 - (void)layoutSubviews {
     [super layoutSubviews];
-    
     [self bringSubviewToFront:self.foldButton];
-    self.contentLabel.width = self.width;
 }
 #pragma mark - Public Methods
 /** 设置内容. */
@@ -115,6 +113,7 @@
         self.contentLabel.attributedText = [[self contentAttributedString:self.contentString] attributedSubstringWithBoundingSize:size maxNumberOfLines:foldLineNum numberOfLines:&numberOfLines];
     }
     [self.contentLabel sizeToFit];
+    self.contentLabel.width = self.contentWidth;
     if (numberOfLines > foldLineNum) {
         self.foldButton.hidden = NO;
     }else {
