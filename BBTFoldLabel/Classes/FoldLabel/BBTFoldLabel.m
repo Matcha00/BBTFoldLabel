@@ -27,12 +27,13 @@
 }
 
 #pragma mark - Properties
-- (UILabel *)contentLabel {
+- (BBTVerticalAlignmentLabel *)contentLabel {
     if (!_contentLabel) {
-        _contentLabel = [[UILabel alloc]init];
+        _contentLabel = [[BBTVerticalAlignmentLabel alloc]init];
         _contentLabel.font = [UIFont systemFontOfSize:15];
         _contentLabel.textColor = [UIColor colorWithHexString:@"#444444"];
         _contentLabel.textAlignment = NSTextAlignmentLeft;
+        _contentLabel.verticalAlignment = BBTVerticalAlignmentTop;
         [self addSubview:_contentLabel];
         [_contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.mas_equalTo(UIEdgeInsetsZero);
@@ -126,7 +127,6 @@
     attributedText.yy_font = self.contentLabel.font;
     attributedText.yy_color = self.contentLabel.textColor;
     NSInteger numberOfLines = 0;
-    NSLog(@"%@", NSStringFromCGRect([attributedText attributedSubstringBoundingRectWithSize:CGSizeMake(200, MAXFLOAT) maxNumberOfLines:4 numberOfLines:numberOfLines]));
     return attributedText;
 }
 #pragma mark - Notifications

@@ -6,11 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <BBTVerticalAlignmentLabel.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BBTFoldLabel : UIView
-@property (nonatomic, strong) UILabel *contentLabel;
+@property (nonatomic, strong) BBTVerticalAlignmentLabel *contentLabel;
 @property (nonatomic, strong) UIButton *foldButton;
 @property (nonatomic, assign) BOOL unfold;
 @property (nonatomic, assign) NSInteger foldLineNum;
