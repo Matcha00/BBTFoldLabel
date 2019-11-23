@@ -27,7 +27,7 @@
         if (lastLineString.length == 0) {
             visiableStringLength = rangeOfLines2.location;
         }else {
-            visiableStringLength = rangeOfLines2.location + MIN(5, [string substringWithRange:NSMakeRange(rangeOfLines2.location, rangeOfLines2.length)].length);
+            visiableStringLength = rangeOfLines2.location + MIN(5, [string substringWithRange:NSMakeRange(rangeOfLines2.location, lastLineString.length)].length);
         }
         if (string.length >= visiableStringLength) {
             [mas replaceCharactersInRange:NSMakeRange(visiableStringLength , string.length-visiableStringLength) withString:@"..."];
