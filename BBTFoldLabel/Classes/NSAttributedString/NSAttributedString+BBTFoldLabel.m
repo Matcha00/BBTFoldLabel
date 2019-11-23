@@ -17,8 +17,18 @@
     NSString *string = self.string.copy;
     if (layout.lines.count > maxNumberOfLines) {
         NSRange rangeOfLines2 = layout.lines[maxNumberOfLines - 1].range;
-//         NSLog(@"第四行文字  %@", [string substringWithRange:NSMakeRange(rangeOfLines2.location, rangeOfLines2.length)]);
-        NSInteger visiableStringLength = rangeOfLines2.location + MIN(5, [string substringWithRange:NSMakeRange(rangeOfLines2.location, rangeOfLines2.length)].length);
+        NSInteger visiableStringLength = 0;
+        /*
+         获取最后一行文字，清楚换行和空格后判断字符串长度
+         */
+        NSString *lastLineString = [string substringWithRange:NSMakeRange(rangeOfLines2.location, rangeOfLines2.length)];
+        lastLineString = [lastLineString stringByReplacingOccurrencesOfString:@"\r"withString:@""];
+        lastLineString = [lastLineString stringByReplacingOccurrencesOfString:@"\n"withString:@""];
+        if (lastLineString.length == 0) {
+            visiableStringLength = rangeOfLines2.location;
+        }else {
+            visiableStringLength = rangeOfLines2.location + MIN(5, [string substringWithRange:NSMakeRange(rangeOfLines2.location, rangeOfLines2.length)].length);
+        }
         if (string.length >= visiableStringLength) {
             [mas replaceCharactersInRange:NSMakeRange(visiableStringLength , string.length-visiableStringLength) withString:@"..."];
         }
