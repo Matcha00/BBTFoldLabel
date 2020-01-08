@@ -11,8 +11,8 @@
 #endif
 
 #import "BBTFoldLabel.h"
-#import "BBTFoldLabelConfig.h"
 #import "BBTVerticalAlignmentLabel.h"
+#import "BBTFoldLabelConfig.h"
 #import "NSAttributedString+BBTFoldLabel.h"
 
 FOUNDATION_EXPORT double BBTFoldLabelVersionNumber;

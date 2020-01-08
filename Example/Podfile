@@ -1,5 +1,5 @@
 use_frameworks!
-
+#source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
 target 'BBTFoldLabel_Example' do
