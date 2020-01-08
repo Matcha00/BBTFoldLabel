@@ -6,8 +6,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <BBTVerticalAlignmentLabel.h>
-#import <BBTFoldLabelConfig.h>
+#import "BBTVerticalAlignmentLabel.h"
+#import "BBTFoldLabelConfig.h"
 NS_ASSUME_NONNULL_BEGIN
 
 
