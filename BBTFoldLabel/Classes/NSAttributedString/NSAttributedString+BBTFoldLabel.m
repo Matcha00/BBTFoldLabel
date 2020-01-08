@@ -9,7 +9,7 @@
 #import <YYText/YYText.h>
 @implementation NSAttributedString (BBTFoldLabel)
 /// 返回当前属性文本 在指定画布大小、最大显示行数下 展示的内容，并返回结果文本行数
-- (NSAttributedString *)attributedSubstringWithBoundingSize:(CGSize)size maxNumberOfLines:(NSInteger)maxNumberOfLines numberOfLines:(NSInteger *)numberOfLines {
+- (NSAttributedString *)attributedSubstringWithBoundingSize:(CGSize)size maxNumberOfLines:(NSInteger)maxNumberOfLines numberOfLines:(NSInteger *)numberOfLines bbtFoldLabelStyle:(BBTFoldLabelStyle)foldLabelStyle{
     YYTextLayout *layout = [YYTextLayout layoutWithContainerSize:size text:self];
     *numberOfLines =  layout.lines.count;
 
@@ -27,18 +27,32 @@
         if (lastLineString.length == 0) {
             visiableStringLength = rangeOfLines2.location;
         }else {
-            visiableStringLength = rangeOfLines2.location + MIN(5, [string substringWithRange:NSMakeRange(rangeOfLines2.location, lastLineString.length)].length);
+            if (foldLabelStyle == BBTFoldLabelStyleCut) {
+                visiableStringLength = rangeOfLines2.location + MIN(5, [string substringWithRange:NSMakeRange(rangeOfLines2.location, lastLineString.length)].length);
+            }else if (foldLabelStyle == BBTFoldLabelStyleNoCut) {
+                visiableStringLength = rangeOfLines2.location + [string substringWithRange:NSMakeRange(rangeOfLines2.location, lastLineString.length)].length;
+            }else {
+                visiableStringLength = rangeOfLines2.location + MIN(5, [string substringWithRange:NSMakeRange(rangeOfLines2.location, lastLineString.length)].length);
+            }
         }
-        if (string.length >= visiableStringLength) {
-            [mas replaceCharactersInRange:NSMakeRange(visiableStringLength , string.length-visiableStringLength) withString:@"..."];
+        if (foldLabelStyle == BBTFoldLabelStyleCut) {
+            if (string.length >= visiableStringLength) {
+                [mas replaceCharactersInRange:NSMakeRange(visiableStringLength , string.length-visiableStringLength) withString:@"..."];
+            }
+        }else if (foldLabelStyle == BBTFoldLabelStyleNoCut) {
+            mas = [[mas attributedSubstringFromRange:NSMakeRange(0, visiableStringLength)] mutableCopy];
+        }else {
+            if (string.length >= visiableStringLength) {
+                           [mas replaceCharactersInRange:NSMakeRange(visiableStringLength , string.length-visiableStringLength) withString:@"..."];
+                       }
         }
     }
     return mas;
 }
 
 /// 返回当前属性文本 在指定画布大小、最大显示行数下 展示的大小，并返回结果文本行数
-- (CGRect)attributedSubstringBoundingRectWithSize:(CGSize)size maxNumberOfLines:(NSInteger)maxNumberOfLines numberOfLines:(NSInteger *)numberOfLines {
-    NSAttributedString *attributedSubstring = [self attributedSubstringWithBoundingSize:size maxNumberOfLines:maxNumberOfLines numberOfLines:numberOfLines];
+- (CGRect)attributedSubstringBoundingRectWithSize:(CGSize)size maxNumberOfLines:(NSInteger)maxNumberOfLines numberOfLines:(NSInteger *)numberOfLines bbtFoldLabelStyle:(BBTFoldLabelStyle)foldLabelStyle{
+    NSAttributedString *attributedSubstring = [self attributedSubstringWithBoundingSize:size maxNumberOfLines:maxNumberOfLines numberOfLines:numberOfLines bbtFoldLabelStyle:foldLabelStyle];
     CGRect rect = [attributedSubstring boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin context:nil];
     return rect;
 }

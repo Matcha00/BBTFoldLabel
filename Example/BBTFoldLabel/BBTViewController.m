@@ -25,9 +25,10 @@
     BBTFoldLabel *foldLabel = [[BBTFoldLabel alloc]init];
     [foldLabel.foldButton setTitle:@"全文" forState:UIControlStateNormal];
     [foldLabel.foldButton setTitle:@"折叠" forState:UIControlStateSelected];
-    foldLabel.foldLineNum = 4;
+    foldLabel.foldLineNum = 5;
     foldLabel.unfold = NO;
     foldLabel.contentWidth = 200;
+    foldLabel.foldLabelStyle = BBTFoldLabelStyleNoCut;
     foldLabel.contentString = @"作为妈妈，想为孩子选一件颜值与功能并存、既保暖又轻盈的羽绒服，讲究真的很多。\n  作为设计师，我想要尽力给孩子们更好的，想要孩子们能有更舒适的穿着体验。\n 一件小小的羽绒服，到底能付出多少创新和技术，到底能承载多少温暖和关爱？\n [95%鹅绒填充] \n 羽绒服，最重要的部分就是填充物，绒含量越高，越保暖。欧利娜利不满足于90%";
     [foldLabel.foldButton mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(31);
@@ -56,7 +57,7 @@
     attributedText.yy_font = [UIFont systemFontOfSize:15];
     attributedText.yy_color = [UIColor redColor];
     NSInteger numberOfLines = 0;
-    NSLog(@"%@", NSStringFromCGRect([attributedText attributedSubstringBoundingRectWithSize:CGSizeMake(200, MAXFLOAT) maxNumberOfLines:4 numberOfLines:&numberOfLines]));
+//    NSLog(@"%@", NSStringFromCGRect([attributedText attributedSubstringBoundingRectWithSize:CGSizeMake(200, MAXFLOAT) maxNumberOfLines:4 numberOfLines:&numberOfLines]));
     return attributedText;
 }
 @end

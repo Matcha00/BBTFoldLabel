@@ -64,11 +64,11 @@
     [self updateContentString:contentString];
     [self.foldButton setNeedsLayout];
 }
-+ (CGFloat)getFoldLabelHeightAttributedString:(NSAttributedString *)attributedString foldLineNum:(NSInteger)foldLineNum contentWidth:(CGFloat)width {
++ (CGFloat)getFoldLabelHeightAttributedString:(NSAttributedString *)attributedString foldLineNum:(NSInteger)foldLineNum contentWidth:(CGFloat)width bbtFoldLabelStyle:(BBTFoldLabelStyle)foldLabelStyle{
     CGSize size = CGSizeMake(width, MAXFLOAT);
     CGFloat height = 0;
     NSInteger numberOfLines = 0;
-    CGRect rect = [attributedString attributedSubstringBoundingRectWithSize:size maxNumberOfLines:foldLineNum numberOfLines:&numberOfLines];
+    CGRect rect = [attributedString attributedSubstringBoundingRectWithSize:size maxNumberOfLines:foldLineNum numberOfLines:&numberOfLines bbtFoldLabelStyle:foldLabelStyle];
     height += rect.size.height;
     return height;
 }
@@ -109,9 +109,9 @@
     CGSize size = CGSizeMake(self.contentWidth, MAXFLOAT);
     NSInteger numberOfLines = 0;
     if ([self.contentString isKindOfClass:[NSAttributedString class]]) {
-        self.contentLabel.attributedText = [(NSAttributedString *)self.contentString attributedSubstringWithBoundingSize:size maxNumberOfLines:foldLineNum numberOfLines:&numberOfLines];
+        self.contentLabel.attributedText = [(NSAttributedString *)self.contentString attributedSubstringWithBoundingSize:size maxNumberOfLines:foldLineNum numberOfLines:&numberOfLines bbtFoldLabelStyle:self.foldLabelStyle];
     }else {
-        self.contentLabel.attributedText = [[self contentAttributedString:self.contentString] attributedSubstringWithBoundingSize:size maxNumberOfLines:foldLineNum numberOfLines:&numberOfLines];
+        self.contentLabel.attributedText = [[self contentAttributedString:self.contentString] attributedSubstringWithBoundingSize:size maxNumberOfLines:foldLineNum numberOfLines:&numberOfLines bbtFoldLabelStyle:self.foldLabelStyle];
     }
     [self.contentLabel sizeToFit];
     self.contentLabel.width = self.contentWidth;

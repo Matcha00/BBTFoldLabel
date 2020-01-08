@@ -11,6 +11,7 @@
 #endif
 
 #import "BBTFoldLabel.h"
+#import "BBTFoldLabelConfig.h"
 #import "BBTVerticalAlignmentLabel.h"
 #import "NSAttributedString+BBTFoldLabel.h"
 
