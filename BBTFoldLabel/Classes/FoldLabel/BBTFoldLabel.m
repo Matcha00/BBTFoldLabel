@@ -6,7 +6,6 @@
 //
 
 #import "BBTFoldLabel.h"
-#import <BBTFoldLabel/NSAttributedString+BBTFoldLabel.h>
 #import <YYCategories/YYCategories.h>
 #import <Masonry/Masonry.h>
 #import <YYText/YYText.h>
